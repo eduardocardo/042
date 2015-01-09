@@ -117,4 +117,19 @@ public class MusicOrganizer
             System.out.println("Error:la cadena introducida no aparece en la lista");
         }
     }
+    
+    /**
+     * método que reproduzca los primeros segundos de todas las canciones
+     * de un determinado artista pasado como parámetro.
+     */
+    public void playingFiles(String artist)
+    {
+        for(String filename : files)
+        {
+            if(filename.contains(artist))
+            {
+                player.playSample(filename);
+            }
+        }
+    }
 }
