@@ -102,12 +102,19 @@ public class MusicOrganizer
      */
     public void listMaching(String searchString)
     {
+        boolean notSearching = false;
         for(String filename : files)
         {
             if(filename.contains(searchString))
             {
                 System.out.println(filename);
+                notSearching = true;
             }
+            
+        }
+        if(notSearching == false)
+        {
+            System.out.println("Error:la cadena introducida no aparece en la lista");
         }
     }
 }
