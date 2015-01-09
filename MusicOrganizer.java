@@ -96,4 +96,18 @@ public class MusicOrganizer
             posicion = posicion + 1;
         }
     }
+    
+    /**
+     * Metodo que lista solo determinados archivos que contengan una cadena
+     */
+    public void listMaching(String searchString)
+    {
+        for(String filename : files)
+        {
+            if(filename.contains(searchString))
+            {
+                System.out.println(filename);
+            }
+        }
+    }
 }
