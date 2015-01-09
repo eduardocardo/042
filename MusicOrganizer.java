@@ -82,4 +82,16 @@ public class MusicOrganizer
     {
         player.stop();
     }
+    
+    /**
+     * Metodo que imprimir por pantalla todos los nombres de archivos MP3s
+     * almacenados en el organizador 
+     */
+    public void listAllFiles()
+    {
+        for (String filename : files)
+        {
+            System.out.println(filename);
+        }
+    }
 }
