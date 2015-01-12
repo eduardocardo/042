@@ -141,7 +141,8 @@ public class MusicOrganizer
     {
         int index = 0;
         boolean found = false;
-        while (!found && index < files.size())
+        int size = files.size();
+        while (!found && index<size)
         {
            String filename = files.get(index);
            if(filename.contains(searchString))
