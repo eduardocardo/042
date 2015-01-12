@@ -132,4 +132,34 @@ public class MusicOrganizer
             }
         }
     }
+    
+    /**
+     * Metodo que devuelve el primer archivo que contenga la cadena introducida como parametro o devuelve -1
+     * en caso de que no exista esa cadena
+     */
+    public int findFirst(String searchString)
+    {
+        int index = 0;
+        boolean found = false;
+        while (!found && index < files.size())
+        {
+           String filename = files.get(index);
+           if(filename.contains(searchString))
+           {
+               found = true;
+           }
+           else
+           {
+               index ++;
+           }    
+        }
+        if(found)
+        {
+            return index;
+        }
+        else
+        {
+            return -1;
+        }
+    }
 }
